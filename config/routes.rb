@@ -21,7 +21,7 @@ Rails.application.routes.draw do
     get '/admin', to: 'admin#index'
     match "/admin/*path", to: "admin#index", format: false, via: :get
 
-    root :to => "application#index"
+    root :to => "admin#index"
     match "*path", to: "application#index", format: false, via: :get
   end
 
